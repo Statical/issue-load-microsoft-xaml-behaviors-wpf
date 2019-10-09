@@ -18,6 +18,8 @@ class App
 }
 ```
 
+This file is compiled as a resource in the project, so it can be loaded from the assembly at run-time.
+
 ```xaml
 <Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
