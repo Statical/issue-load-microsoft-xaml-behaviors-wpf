@@ -30,6 +30,7 @@ class App
         
     <!-- Boom! -->
     <i:Interaction.Triggers>
+        <!-- ...even without any triggers in the collection -->
     </i:Interaction.Triggers>
     
 </Window>
