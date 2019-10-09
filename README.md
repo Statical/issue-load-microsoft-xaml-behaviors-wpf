@@ -2,6 +2,8 @@
 
 Issue with Microsoft.Xaml.Behaviors.Wpf package when loading XAML resources.
 
+## Annotated code
+
 ```csharp
 class App
 {
@@ -34,4 +36,29 @@ class App
     </i:Interaction.Triggers>
     
 </Window>
+```
+
+## Exception
+
+XamlObjectWriterException: 'Cannot set unknown member '{http://schemas.microsoft.com/xaml/behaviors}Interaction.Triggers'.
+
+```csharp
+System.Windows.Markup.XamlParseException
+  HResult=0x80131501
+  Message='Cannot set unknown member '{http://schemas.microsoft.com/xaml/behaviors}Interaction.Triggers'.' Line number '11' and line position '6'.
+  Source=PresentationFramework
+  StackTrace:
+   at System.Windows.Markup.XamlReader.RewrapException(Exception e, IXamlLineInfo lineInfo, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, Boolean skipJournaledProperties, Uri baseUri)
+   at System.Windows.Markup.XamlReader.Load(XamlReader xamlReader, ParserContext parserContext)
+   at System.Windows.Markup.XamlReader.Load(XmlReader reader, ParserContext parserContext, XamlParseMode parseMode, Boolean useRestrictiveXamlReader)
+   at System.Windows.Markup.XamlReader.Load(Stream stream, ParserContext parserContext, Boolean useRestrictiveXamlReader)
+   at System.Windows.Markup.XamlReader.Load(Stream stream, ParserContext parserContext)
+   at System.Windows.Application.LoadComponent(Uri resourceLocator, Boolean bSkipJournaledProperties)
+   at System.Windows.Application.LoadComponent(Uri resourceLocator)
+   at BehaviorIssueRepro.CSharp.Fail.App.Main(String[] args) in C:\Users\foo\issue-microsoft-xaml-behaviors-wpf\src\BehaviorIssueRepro.CSharp.Fail\App.cs:line 12
+
+Inner Exception 1:
+XamlObjectWriterException: 'Cannot set unknown member '{http://schemas.microsoft.com/xaml/behaviors}Interaction.Triggers'.' Line number '11' and line position '6'.
 ```
