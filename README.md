@@ -64,3 +64,9 @@ System.Windows.Markup.XamlParseException
 Inner Exception 1:
 XamlObjectWriterException: 'Cannot set unknown member '{http://schemas.microsoft.com/xaml/behaviors}Interaction.Triggers'.' Line number '11' and line position '6'.
 ```
+
+## Update
+
+Converted to .NET 5 and newest nuget packages as of 6th June 2021. Issues are stil there.
+
+The C# project that mitigates the issue by using the Page compile type will produce an MSBUILD null reference error - added new project to show that as well as a binlog file.
