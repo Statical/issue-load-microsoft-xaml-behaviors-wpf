@@ -70,3 +70,5 @@ XamlObjectWriterException: 'Cannot set unknown member '{http://schemas.microsoft
 Converted to .NET 5 and newest nuget packages as of June 2nd 2021. Issues are stil there.
 
 The C# project that mitigates the issue by using the Page compile type will produce an MSBUILD null reference error - added new project to show that as well as a binlog file.
+
+See also https://github.com/dotnet/wpf/issues/3813
