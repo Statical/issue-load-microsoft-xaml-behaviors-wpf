@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:BehaviorIssueRepro.CSharp.Pass"
              StartupUri="Start.xaml">
     <Application.Resources>
-         
+   
     </Application.Resources>
 </Application>

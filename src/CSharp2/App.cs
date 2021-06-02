@@ -9,7 +9,8 @@ namespace BehaviorIssueRepro.CSharp.Fail
         public static void Main(string[] args)
         {
             var app = new Application();
-            var window = Application.LoadComponent(new Uri("/BehaviorIssueRepro.CSharp.Fail;component/Start.xaml", UriKind.Relative)) as Window;
+            // Relative lookup of item with BuildAction=Page (MSBuild:Compile) => success
+            var window = Application.LoadComponent(new Uri("Start.xaml", UriKind.Relative)) as Window;
             app.Run(window);
         }
     }
