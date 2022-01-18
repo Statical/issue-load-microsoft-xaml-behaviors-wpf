@@ -67,7 +67,7 @@ XamlObjectWriterException: 'Cannot set unknown member '{http://schemas.microsoft
 
 ## Update
 
-Converted to .NET 5 and newest nuget packages as of June 2nd 2021. Issues are stil there.
+Converted to .NET 6 and newest nuget packages as of JAN 18 2022. Issues are stil there.
 
 The C# project that mitigates the issue by using the BuildActioon=Page will instead produce an MSBuild null reference exeption when tried in an F# project - added new project to show that as well as a binlog file.
 
